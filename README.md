@@ -1,5 +1,5 @@
 
-# 📘 README: Serverless Cinode Deal Notification Pipeline (Terraform + AWS)
+# Serverless Cinode Deal Notification Pipeline (Terraform + AWS)
 
 ## 📌 Overview
 
