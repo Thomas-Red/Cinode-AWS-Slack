@@ -3,7 +3,7 @@
 
 ## 📌 Overview
 
-This project provisions a **serverless event-driven architecture** in AWS using **Terraform**. The system listens for **Cinode webhook events** (e.g., new “won deals”), validates incoming data, scrubs and queues it, and sends a formatted message to a **Slack channel** using a custom bot — all managed with secure and observable practices.
+This project provisions a **serverless event-driven architecture** in AWS using **Terraform**. The system listens for **Cinode webhook events** (specifically new “won deals”), validates incoming data, scrubs and queues it, and sends a formatted message to a **Slack channel** using a custom bot — all managed with secure and observable practices.
 
 All infrastructure is defined as **infrastructure-as-code**, and secrets are securely stored in **AWS Systems Manager Parameter Store**.
 
@@ -164,10 +164,3 @@ terraform destroy -var="profile=your-aws-profile"
 - **DLQ Monitoring**: Check for failed messages in `DealBot-DLQ`
 - **X-Ray Tracing**: Enabled at API Gateway stage
 - Sensitive values are **redacted from logs**
-
-## 🧠 Potential Enhancements
-
-- Add DLQ -> SNS + email alerting
-- Use Secrets Manager instead of Parameter Store
-- Add LocalStack testing pipeline
-- Harden Lambda auth with HMAC signature verification
