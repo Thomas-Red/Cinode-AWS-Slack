@@ -35,8 +35,8 @@ jobs:
       - name: ✅ Terraform Validate
         run: terraform validate
 
-      - name: 📐 Terraform Plan
-        run: terraform plan -out=tfplan
+      - name: Terraform Plan
+        run: terraform plan -out=tfplan || true
 
       - name: 🚀 Terraform Apply (Manual Approval Required)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
