@@ -7,7 +7,7 @@ variable "region" {
 variable "profile" {
   description = "The SSO profile to use"
   type        = string
-  default = "thomas-admin"
+  default = "AWSAdministratorAccess-640168424878"
 }
 
 variable "function_name_auth" {
